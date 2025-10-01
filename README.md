@@ -33,5 +33,4 @@ Tech Stack
   - `pandas`, `numpy`, `matplotlib` → Data handling  
   - `streamlit` → Web UI  
 
-cd phishing-email-detector
 
