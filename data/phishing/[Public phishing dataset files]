@@ -1,0 +1,9 @@
+# The contents of the file: /phishing-email-detector/phishing-email-detector/data/phishing/[Public phishing dataset files]
+
+This directory is intended to contain various public phishing dataset files. Please add the relevant phishing dataset files here, such as:
+
+- phishing_dataset_1.csv
+- phishing_dataset_2.csv
+- phishing_dataset_3.csv
+
+These files should include labeled phishing emails that can be used for training and testing the phishing email detection model. Each file should ideally have columns for the email content and a label indicating whether it is phishing or not.

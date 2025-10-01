@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Email Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Email Detector with Explainable AI</h1>
+        <form method="POST">
+            <label for="email_text">Enter the email text to analyze:</label>
+            <textarea id="email_text" name="email_text" rows="10" cols="50" required></textarea>
+            <br>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>

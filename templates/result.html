@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Result</h1>
+        <p><strong>Email Text:</strong></p>
+        <p>{{ email_text }}</p>
+        <p><strong>Prediction:</strong> {{ result }}</p>
+        <form method="POST" action="/explain">
+            <input type="hidden" name="email_text" value="{{ email_text }}">
+            <button type="submit">Explain Why</button>
+        </form>
+        <br>
+        <a href="/">Analyze Another Email</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Flask
+numpy
+pandas
+scikit-learn
+nltk
+transformers
+torch
+shap
+streamlit
+matplotlib
+seaborn
+pytest
