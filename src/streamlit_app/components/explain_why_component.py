@@ -1,20 +1,16 @@
-from streamlit import expander, markdown
+import streamlit as st
 
-def explain_why(prediction, shap_values, feature_names, email_text):
-    with expander("Explain Why", expanded=True):
+def explain_why_component(prediction, explanation, email_text):
+    with st.expander("Explain Why", expanded=True):
         if prediction == 1:
-            markdown("### This email is likely a phishing attempt.")
+            st.markdown("### This email is likely a phishing attempt.")
         else:
-            markdown("### This email is likely legitimate.")
+            st.markdown("### This email is likely legitimate.")
 
         # Display the email text
-        markdown("#### Email Content:")
-        markdown(email_text)
+        st.markdown("#### Email Content:")
+        st.markdown(email_text)
 
-        # Display SHAP values
-        markdown("### Important Features:")
-        for i in shap_values.argsort()[0][:10]:  # Show top 10 features
-            markdown(f"- **{feature_names[i]}**: {shap_values[0][i]:.4f}")
-
-        markdown("### Interpretation:")
-        markdown("The above features contributed the most to the model's decision. A higher absolute SHAP value indicates a stronger influence on the prediction.")
+        # Display the explanation
+        st.markdown("### Explanation:")
+        st.markdown(explanation)

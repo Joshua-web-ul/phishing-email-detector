@@ -3,6 +3,7 @@ import os
 import re
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
+from src.utils.feature_extraction import add_features_to_dataframe
 
 # Define function to clean email text
 def clean_email(text):
@@ -24,6 +25,10 @@ phishing_path = 'data/phishing/'
 phishing_files = [f for f in os.listdir(phishing_path) if f.endswith('.csv')]
 phishing_data = pd.concat([pd.read_csv(os.path.join(phishing_path, f)) for f in phishing_files], ignore_index=True)
 
+# Keep original text for feature extraction
+enron_data['original_text'] = enron_data['message'].fillna('')
+phishing_data['original_text'] = phishing_data['Email Text'].fillna('') if 'Email Text' in phishing_data.columns else phishing_data.iloc[:, 0].fillna('')
+
 # Clean the email text in both datasets
 enron_data['cleaned_text'] = enron_data['message'].apply(clean_email).fillna('')
 # Adjust phishing dataset column name for email text
@@ -35,7 +40,11 @@ else:
 # Combine datasets and create labels
 enron_data['label'] = 0  # Legitimate emails
 phishing_data['label'] = 1  # Phishing emails
-combined_data = pd.concat([enron_data[['cleaned_text', 'label']], phishing_data[['cleaned_text', 'label']]], ignore_index=True)
+combined_data = pd.concat([enron_data[['original_text', 'cleaned_text', 'label']], phishing_data[['original_text', 'cleaned_text', 'label']]], ignore_index=True)
+
+# Extract additional features
+combined_data = add_features_to_dataframe(combined_data, text_column='original_text')
+print("Columns after feature extraction:", combined_data.columns.tolist())
 
 # Drop rows with empty cleaned_text
 combined_data = combined_data[combined_data['cleaned_text'] != '']
