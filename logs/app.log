@@ -1,3 +1,4 @@
 2025-10-03 14:03:12,198 Prediction: email_hash=e5289c062800781ebc40ad8a5818ef164d9d90c570b62e24242f3deb44918f2a, lr=1, bert=0, ensemble=1, score=0.00
 2025-10-03 14:06:47,856 Prediction: email_hash=e5289c062800781ebc40ad8a5818ef164d9d90c570b62e24242f3deb44918f2a, lr=1, bert=1, ensemble=1, score=0.00
 2025-10-06 10:53:59,049 Prediction: email_hash=35f115b234aea9f4c0f1c762023c8287a14c35d306ff61cd46c349434b554c37, lr=1, bert=1, ensemble=1, score=0.00
+2025-10-07 14:04:34,913 Prediction: email_hash=1fb6ef44350e3ff115eaa520b75ef5f248ff3ec9bef3e38563ae31a17505ef61, lr=0, bert=0, ensemble=0, score=0.00
