@@ -13,12 +13,8 @@ class LogisticRegressionModel:
         self.scaler = StandardScaler()
         self.model = LogisticRegression()
         # Load pre-trained model if exists
-        model_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'models')
-        model_path = os.path.join(model_dir, 'baseline_model.pkl')
-        vectorizer_path = os.path.join(model_dir, 'tfidf_vectorizer.pkl')
-        scaler_path = os.path.join(model_dir, 'feature_scaler.pkl')
-        if os.path.exists(model_path) and os.path.exists(vectorizer_path) and os.path.exists(scaler_path):
-            self.load_model(model_path, vectorizer_path, scaler_path)
+        if os.path.exists('models/baseline_model.pkl') and os.path.exists('models/tfidf_vectorizer.pkl') and os.path.exists('models/feature_scaler.pkl'):
+            self.load_model('models/baseline_model.pkl', 'models/tfidf_vectorizer.pkl', 'models/feature_scaler.pkl')
 
     def train(self, emails, features, labels):
         # Remove any NaN or None emails before training
