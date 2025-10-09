@@ -3,6 +3,7 @@
 ## 1. Hyperparameter Tuning
 - [x] Implement GridSearchCV for Logistic Regression model in baseline_training.py.
 - [x] Implement Optuna hyperparameter tuning for BERT model in bert_training.py.
+- [x] Update baseline_training.py to train LogisticRegressionModel with combined text and features, saving fitted components to expected paths.
 
 ## 2. Data Augmentation
 - [ ] Add synonym replacement or back-translation augmentation in data preprocessing pipeline.

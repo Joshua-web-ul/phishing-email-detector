@@ -20,6 +20,7 @@ from src.utils.phishiness_score import PhishinessScore
 from src.explainability.explain_why import ExplainWhy
 from src.streamlit_app.components.explain_why_component import explain_why_component
 from src.streamlit_app.components.mitigation_advice import display_mitigation_advice
+from src.streamlit_app.components.footer import display_footer
 from src.utils.feature_extraction import extract_features
 
 # Custom CSS
@@ -349,6 +350,9 @@ if analyze_button:
             logging.info(f"Prediction: email_hash={hashlib.sha256(email_text.encode('utf-8')).hexdigest()}, lr={lr_prediction}, bert={bert_prediction}, ensemble={ensemble_prediction}, score={phishiness_score:.2f}")
     else:
         st.warning("Please enter or upload an email text to analyze.")
+
+# Display footer on all pages
+display_footer()
 
 # Dark Mode CSS
 if "dark_mode" in st.session_state and st.session_state.dark_mode:
