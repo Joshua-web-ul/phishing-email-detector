@@ -29,3 +29,6 @@ weighted avg       1.00      1.00      1.00     85766
 
 2025-10-09 14:31:00,488 - INFO - Model and artifacts saved to models/model_20251009_143100
 2025-10-09 14:31:00,489 - INFO - Training completed successfully!
+2025-10-09 16:07:57,504 - INFO - Loading data from data/preprocessed_train_data.csv
+2025-10-09 16:08:31,068 - INFO - Loaded 428828 samples
+2025-10-09 16:08:31,068 - INFO - Extracting features...
