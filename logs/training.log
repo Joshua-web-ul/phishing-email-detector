@@ -32,3 +32,4 @@ weighted avg       1.00      1.00      1.00     85766
 2025-10-09 16:07:57,504 - INFO - Loading data from data/preprocessed_train_data.csv
 2025-10-09 16:08:31,068 - INFO - Loaded 428828 samples
 2025-10-09 16:08:31,068 - INFO - Extracting features...
+2025-10-09 16:12:27,245 - INFO - Extracted 6 features
