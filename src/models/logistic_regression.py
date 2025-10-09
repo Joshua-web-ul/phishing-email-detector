@@ -13,16 +13,8 @@ class LogisticRegressionModel:
         self.scaler = StandardScaler()
         self.model = LogisticRegression()
         # Load pre-trained model if exists
-        print(f"DEBUG: Checking for model files in {os.getcwd()}")
-        print(f"DEBUG: baseline_model.pkl exists: {os.path.exists('models/baseline_model.pkl')}")
-        print(f"DEBUG: tfidf_vectorizer.pkl exists: {os.path.exists('models/tfidf_vectorizer.pkl')}")
-        print(f"DEBUG: feature_scaler.pkl exists: {os.path.exists('models/feature_scaler.pkl')}")
         if os.path.exists('models/baseline_model.pkl') and os.path.exists('models/tfidf_vectorizer.pkl') and os.path.exists('models/feature_scaler.pkl'):
-            print("DEBUG: Loading models...")
             self.load_model('models/baseline_model.pkl', 'models/tfidf_vectorizer.pkl', 'models/feature_scaler.pkl')
-            print("DEBUG: Models loaded successfully")
-        else:
-            print("DEBUG: Model files not found, using unfitted components")
 
     def train(self, emails, features, labels):
         # Remove any NaN or None emails before training
