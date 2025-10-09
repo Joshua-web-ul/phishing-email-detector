@@ -1,0 +1,6 @@
+reply_to_mismatch
+link_count
+urgency_score
+all_caps_subject
+has_attachment
+sender_domain_encoded

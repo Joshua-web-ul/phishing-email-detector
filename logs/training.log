@@ -33,3 +33,22 @@ weighted avg       1.00      1.00      1.00     85766
 2025-10-09 16:08:31,068 - INFO - Loaded 428828 samples
 2025-10-09 16:08:31,068 - INFO - Extracting features...
 2025-10-09 16:12:27,245 - INFO - Extracted 6 features
+2025-10-09 16:21:48,268 - INFO - Evaluating model...
+2025-10-09 16:21:49,578 - INFO - Accuracy: 0.9993
+2025-10-09 16:21:49,578 - INFO - Precision: 0.9816
+2025-10-09 16:21:49,603 - INFO - Recall: 1.0000
+2025-10-09 16:21:49,606 - INFO - F1 Score: 0.9907
+2025-10-09 16:21:49,628 - INFO - ROC AUC: 1.0000
+2025-10-09 16:21:49,806 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+  Legitimate       1.00      1.00      1.00     82785
+    Phishing       0.98      1.00      0.99      2981
+
+    accuracy                           1.00     85766
+   macro avg       0.99      1.00      1.00     85766
+weighted avg       1.00      1.00      1.00     85766
+
+2025-10-09 16:21:55,380 - INFO - Model and artifacts saved to models/model_20251009_162154
+2025-10-09 16:21:55,382 - INFO - Training completed successfully!
